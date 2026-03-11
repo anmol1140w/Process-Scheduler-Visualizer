@@ -24,9 +24,9 @@ function MetricsPanel({metrics}) {
 
           {metrics.map((m,i)=>(
             <tr key={i}>
-              <td>{m.process}</td>
+              <td>P{m.pid}</td>
               <td>{m.waiting}</td>
-              <td>{m.tat}</td>
+              <td>{m.turnaround}</td>
             </tr>
           ))}
 

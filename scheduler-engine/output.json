@@ -1,72 +1,66 @@
 {
     "metrics": [
         {
-            "completion": 12,
-            "pid": 1,
-            "turnaround": 12,
-            "waiting": 7
+            "completion": 10,
+            "pid": 23,
+            "turnaround": 6,
+            "waiting": 0
         },
         {
-            "completion": 9,
+            "completion": 16,
             "pid": 2,
-            "turnaround": 8,
-            "waiting": 5
-        },
-        {
-            "completion": 11,
-            "pid": 3,
-            "turnaround": 9,
-            "waiting": 5
+            "turnaround": 10,
+            "waiting": 4
         }
     ],
     "timeline": [
         {
-            "pid": 1,
-            "time": 0
-        },
-        {
-            "pid": 1,
-            "time": 1
-        },
-        {
-            "pid": 2,
-            "time": 2
-        },
-        {
-            "pid": 2,
-            "time": 3
-        },
-        {
-            "pid": 3,
+            "pid": 23,
             "time": 4
         },
         {
-            "pid": 3,
+            "pid": 23,
             "time": 5
         },
         {
-            "pid": 1,
+            "pid": 23,
             "time": 6
         },
         {
-            "pid": 1,
+            "pid": 23,
             "time": 7
         },
         {
-            "pid": 2,
+            "pid": 23,
             "time": 8
         },
         {
-            "pid": 3,
+            "pid": 23,
             "time": 9
         },
         {
-            "pid": 3,
+            "pid": 2,
             "time": 10
         },
         {
-            "pid": 1,
+            "pid": 2,
             "time": 11
+        },
+        {
+            "pid": 2,
+            "time": 12
+        },
+        {
+            "pid": 2,
+            "time": 13
+        },
+        {
+            "pid": 2,
+            "time": 14
+        },
+        {
+            "pid": 2,
+            "time": 15
         }
     ]
 }

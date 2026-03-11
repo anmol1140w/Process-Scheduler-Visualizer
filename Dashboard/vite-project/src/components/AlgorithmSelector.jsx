@@ -13,14 +13,15 @@ function AlgorithmSelector({algorithm,setAlgorithm,quantum,setQuantum}) {
 
       <select value={algorithm} onChange={handleAlgorithmChange}>
 
-        <option value="FCFS">FCFS</option>
-        <option value="SJF">SJF</option>
-        <option value="RR">Round Robin</option>
-        <option value="PRIORITY">Priority</option>
+        <option value="fcfs">FCFS</option>
+        <option value="sjf">SJF</option>
+        <option value="rr">Round Robin</option>
+        <option value="priority_np">Priority (Non-Preemptive)</option>
+        <option value="priority_p">Priority (Preemptive)</option>
 
       </select>
 
-      {algorithm === "RR" && (
+      {algorithm === "rr" && (
         <div style={{marginTop:"10px"}}>
 
           <label>Quantum: </label>

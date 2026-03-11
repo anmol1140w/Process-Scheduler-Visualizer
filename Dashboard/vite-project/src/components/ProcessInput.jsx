@@ -3,7 +3,7 @@ import { useState } from "react"
 function ProcessInput({setProcesses}) {
 
   const [process,setProcess] = useState({
-    id:"",
+    pid:"",
     arrival:"",
     burst:"",
     priority:""
@@ -17,7 +17,7 @@ function ProcessInput({setProcesses}) {
     setProcesses(prev => [...prev,process])
 
     setProcess({
-      id:"",
+      pid:"",
       arrival:"",
       burst:"",
       priority:""
@@ -31,8 +31,8 @@ function ProcessInput({setProcesses}) {
 
       <input
         placeholder="Process ID"
-        name="id"
-        value={process.id}
+        name="pid"
+        value={process.pid}
         onChange={handleChange}
       />
 
