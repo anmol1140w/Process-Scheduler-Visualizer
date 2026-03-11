@@ -1,0 +1,72 @@
+{
+    "metrics": [
+        {
+            "completion": 12,
+            "pid": 1,
+            "turnaround": 12,
+            "waiting": 7
+        },
+        {
+            "completion": 9,
+            "pid": 2,
+            "turnaround": 8,
+            "waiting": 5
+        },
+        {
+            "completion": 11,
+            "pid": 3,
+            "turnaround": 9,
+            "waiting": 5
+        }
+    ],
+    "timeline": [
+        {
+            "pid": 1,
+            "time": 0
+        },
+        {
+            "pid": 1,
+            "time": 1
+        },
+        {
+            "pid": 2,
+            "time": 2
+        },
+        {
+            "pid": 2,
+            "time": 3
+        },
+        {
+            "pid": 3,
+            "time": 4
+        },
+        {
+            "pid": 3,
+            "time": 5
+        },
+        {
+            "pid": 1,
+            "time": 6
+        },
+        {
+            "pid": 1,
+            "time": 7
+        },
+        {
+            "pid": 2,
+            "time": 8
+        },
+        {
+            "pid": 3,
+            "time": 9
+        },
+        {
+            "pid": 3,
+            "time": 10
+        },
+        {
+            "pid": 1,
+            "time": 11
+        }
+    ]
+}
