@@ -1,6 +1,6 @@
 export async function runScheduler(data) {
 
-  const response = await fetch("http://localhost:5000/run", {
+  const response = await fetch("http://localhost:5000/schedule", {
     method: "POST",
     headers:{
       "Content-Type":"application/json"
