@@ -1,6 +1,6 @@
 {
-  "algorithm": "fcfs",
-  "quantum": 0,
+  "algorithm": "priority_p",
+  "quantum": 2,
   "processes": [
     {
       "pid": 23,
