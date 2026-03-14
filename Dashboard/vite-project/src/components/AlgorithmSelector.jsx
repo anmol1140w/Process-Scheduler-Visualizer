@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ChevronDown, Info, Zap } from "lucide-react";
 
 function AlgorithmSelector({ algorithm, setAlgorithm, quantum, setQuantum }) {
@@ -25,21 +24,17 @@ function AlgorithmSelector({ algorithm, setAlgorithm, quantum, setQuantum }) {
     },
   };
 
-  const handleAlgorithmChange = (e) => {
-    setAlgorithm(e.target.value);
-  };
-
   return (
-    <div className="space-y-5">
-      <div className="relative group">
-        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 block">
-          Select Strategy
-        </label>
-        <div className="relative">
+    <div className="space-y-6">
+      <div className="space-y-4 animate-in fade-in duration-500">
+        <div>
+          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2 block">
+            Scheduling strategy
+          </label>
           <select
-            className="w-full pl-4 pr-10 py-3 bg-slate-50 border border-slate-200 rounded-xl appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm font-semibold text-slate-700 cursor-pointer"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm font-semibold text-slate-700 appearance-none cursor-pointer hover:bg-slate-100/50"
             value={algorithm}
-            onChange={handleAlgorithmChange}
+            onChange={(e) => setAlgorithm(e.target.value)}
           >
             <option value="fcfs">FCFS (Standard)</option>
             <option value="sjf">Shortest Job First</option>
@@ -47,33 +42,26 @@ function AlgorithmSelector({ algorithm, setAlgorithm, quantum, setQuantum }) {
             <option value="priority_np">Priority (Non-Preemptive)</option>
             <option value="priority_p">Priority (Preemptive)</option>
           </select>
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-hover:text-indigo-500 transition-colors">
-            <ChevronDown size={18} />
-          </div>
         </div>
-      </div>
 
-      <div className="bg-indigo-50/50 rounded-xl p-4 border border-indigo-100 flex gap-3">
-        <div className="mt-0.5 text-indigo-500">
-          <Info size={16} />
-        </div>
-        <div>
-          <h4 className="text-xs font-bold text-indigo-900 mb-1">
-            {algorithms[algorithm].name}
-          </h4>
-          <p className="text-[11px] leading-relaxed text-indigo-700/80 italic font-medium">
+        <div className="p-4 bg-indigo-50/50 rounded-xl border border-indigo-100/50 shadow-inner">
+          <div className="flex items-center gap-2 mb-2 text-indigo-600">
+            <Info size={14} />
+            <span className="text-[10px] font-bold uppercase tracking-widest">About this strategy</span>
+          </div>
+          <p className="text-xs text-slate-600 leading-relaxed font-medium italic">
             {algorithms[algorithm].desc}
           </p>
         </div>
       </div>
 
       {algorithm === "rr" && (
-        <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-              <Zap size={14} className="text-amber-500" /> Time Quantum
+        <div className="space-y-2 animate-in slide-in-from-top-2 duration-300">
+          <div className="flex items-center justify-between px-1">
+            <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+              <Zap size={13} className="text-amber-500" /> Time quantum
             </label>
-            <span className="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">Required</span>
+            <span className="text-[9px] font-bold text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded uppercase tracking-tighter">*Required</span>
           </div>
           <input
             className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm font-bold text-slate-700"
@@ -81,7 +69,7 @@ function AlgorithmSelector({ algorithm, setAlgorithm, quantum, setQuantum }) {
             min="1"
             value={quantum}
             onChange={(e) => setQuantum(e.target.value)}
-            placeholder="Enter quantum (e.g. 2)"
+            placeholder="e.g. 2"
           />
         </div>
       )}
